@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+    <!--尤其要注意view pager和它的父容器都要设置android:clipChildren="false"，viewpager要比每个子元素宽，以及设置margin才能显示相邻的元素,每个元素的宽度也要固定-->
+    <LinearLayout
+        android:id="@+id/ll_oil_card_container"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:padding="10dp"
+        android:layerType="software"
+        android:baselineAligned="false"
+        android:clipChildren="false">
+        <android.support.v4.view.ViewPager
+            android:id="@+id/vp_oil_cards"
+            android:layout_width="match_parent"
+            android:layout_height="100dp"
+            android:layout_marginLeft="80dp"
+            android:layout_marginRight="80dp"
+            android:clipChildren="false"></android.support.v4.view.ViewPager>
+    </LinearLayout>
+
+</LinearLayout>
